@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from dash import no_update
 import datetime as dt
+from pathlib import Path
 
 #Create app
 app = dash.Dash(__name__)
@@ -14,7 +15,17 @@ app = dash.Dash(__name__)
 app.config.suppress_callback_exceptions = True
 
 # Read the wildfire data into pandas dataframe
-df =  pd.read_csv("Assets/1_Historical_Wildfires.csv")
+# Load data using a path relative to this script so it works from any working directory
+base_dir = Path(__file__).resolve().parent
+data_path = base_dir / "Assets" / "1_Historical_Wildfires.csv"
+
+if not data_path.exists():
+    raise FileNotFoundError(f"Could not find data file at: {data_path}")
+
+df = pd.read_csv(data_path)
+
+# Initialize the app
+app = dash.Dash(__name__)
 
 #Extract year and month from the date column
 df['Month'] = pd.to_datetime(df['Date']).dt.month_name() #used for the names of the months

@@ -92,10 +92,16 @@ import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
 
-# Load data
-# Ensure the CSV file is in the same directory as this script
-data = pd.read_csv("Assets/2_Automobile_Sales.csv")
+# Load data using a path relative to this script so it works from any working directory
+base_dir = Path(__file__).resolve().parent
+data_path = base_dir / "Assets" / "2_Automobile_Sales.csv"
+
+if not data_path.exists():
+    raise FileNotFoundError(f"Could not find data file at: {data_path}")
+
+data = pd.read_csv(data_path)
 
 # Initialize the app
 app = dash.Dash(__name__)
