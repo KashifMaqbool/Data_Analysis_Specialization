@@ -1,7 +1,7 @@
 # 🐍 Python for Data Science and AI Development  
-### *(Part of the Data Analysis Specialization)*  
+### *(Part of the Data Science Specialization)*  
 
-Welcome to the **Python for Data Science and AI Development** the learning of this course, is a key part of my **Data Analysis Specialization**.  
+Welcome to the **Python for Data Science and AI Development** the learning of this course, is a key part of my **Data Science Specialization**.  
 
 This repository **serves** as a **reference and connection point** to my main **Python learning repository**, where I’ve covered **all fundamental and advanced Python concepts** — from basic syntax to Object-Oriented Programming (OOP), advanced modules, Testing, Debugging, Lambda Expressions, profiling, Numpy, Pandas, Beautiful soup,  and much more.  
 
@@ -71,8 +71,8 @@ You are free to share and adapt the material with attribution, but **no commerci
 
 ## 🙌 Author
 
-**Kashif Maqbool Joiya**  
-🎓 Data Analyst & Data Scientist | Aspiring AI Engineer  
+**KASHIF MAQBOOL JOIYA**  
+🎓 Data Scientist | AI Engineer  
 💻 Passionate about Open Source, Data Science, Big Data, and AI Systems  
 
 🌐 Connect with me:  
